@@ -197,6 +197,13 @@ return {
                 desc = "Help Tags",
             },
             {
+                "<leader>fx",
+                function()
+                    Snacks.picker.commands()
+                end,
+                desc = "Command",
+            },
+            {
                 "<leader>fc",
                 function()
                     Snacks.picker.command_history()

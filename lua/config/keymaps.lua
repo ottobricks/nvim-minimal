@@ -6,8 +6,18 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Better up/down
-keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
-keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+keymap.set(
+    { "n", "x" },
+    "j",
+    "v:count == 0 ? 'gj' : 'j'",
+    { desc = "Down", expr = true, silent = true }
+)
+keymap.set(
+    { "n", "x" },
+    "k",
+    "v:count == 0 ? 'gk' : 'k'",
+    { desc = "Up", expr = true, silent = true }
+)
 keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jump into half page down" })
 keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jump into half page up" })
 
@@ -59,22 +69,36 @@ keymap.set("v", ">", ">gv")
 -- LSP
 keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { desc = "Goto Definition" })
 keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", { desc = "Goto Declaration" })
-keymap.set("n", "gr", function() Snacks.picker.lsp_references() end, { desc = "References" })
-keymap.set("n", "gI", function() Snacks.picker.lsp_implementations() end, { desc = "Goto Implementation" })
-keymap.set("n", "gt", function() Snacks.picker.lsp_type_definitions() end, { desc = "Goto Type Definition" })
+keymap.set("n", "gr", function()
+    Snacks.picker.lsp_references()
+end, { desc = "References" })
+keymap.set("n", "gI", function()
+    Snacks.picker.lsp_implementations()
+end, { desc = "Goto Implementation" })
+keymap.set("n", "gt", function()
+    Snacks.picker.lsp_type_definitions()
+end, { desc = "Goto Type Definition" })
 keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", { desc = "Hover" })
 keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", { desc = "Code Action" })
 keymap.set("n", "<leader>cr", "<cmd>lua vim.lsp.buf.rename()<cr>", { desc = "Rename" })
 -- keymap.set("n", "<leader>cf", "<cmd>lua vim.lsp.buf.format()<cr>", { desc = "Format" })
 
 -- Diagnostics
-keymap.set("n", "<leader>cd", function() Snacks.picker.diagnostics({ current_buffer = true }) end, { desc = "Document Diagnostics" })
-keymap.set("n", "<leader>cD", function() Snacks.picker.diagnostics() end, { desc = "Workspace Diagnostics" })
+keymap.set("n", "<leader>cd", function()
+    Snacks.picker.diagnostics({ current_buffer = true })
+end, { desc = "Document Diagnostics" })
+keymap.set("n", "<leader>cD", function()
+    Snacks.picker.diagnostics()
+end, { desc = "Workspace Diagnostics" })
 keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", { desc = "Next Diagnostic" })
 keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { desc = "Prev Diagnostic" })
 
 -- Additional LSP keymaps for Snacks picker
-keymap.set("n", "<leader>cs", function() Snacks.picker.lsp_symbols() end, { desc = "Document Symbols" })
-keymap.set("n", "<leader>cS", function() Snacks.picker.lsp_symbols({ workspace = true }) end, { desc = "Workspace Symbols" })
+keymap.set("n", "<leader>cs", function()
+    Snacks.picker.lsp_symbols()
+end, { desc = "Document Symbols" })
+keymap.set("n", "<leader>cS", function()
+    Snacks.picker.lsp_symbols({ workspace = true })
+end, { desc = "Workspace Symbols" })
 
 -- Terminal keymaps are now handled by Snacks

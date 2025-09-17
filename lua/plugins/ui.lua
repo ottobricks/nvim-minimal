@@ -147,6 +147,9 @@ return {
                     { section = "keys" },
                     { section = "startup" },
                 },
+                preset = {
+                    header = [[]],
+                },
             },
             terminal = { enabled = true },
             zen = { enabled = true },

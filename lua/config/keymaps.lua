@@ -38,7 +38,7 @@ keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste and keep the copy" })
 keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Better yank" })
 keymap.set("n", "<leader>Y", [["+Y]], { desc = "Better yank" })
 keymap.set("n", "<C-a>", "ggVG", { desc = "V to All" })
-keymap.set("n", "<C-y>", "ggVG<leader>y", { desc = "Yank all" })
+-- keymap.set("n", "<leader><C-y>", "ggVG<leader>y", { desc = "Yank all" })
 
 -- Move Lines
 keymap.set("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
@@ -58,7 +58,7 @@ keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" 
 keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
 
 -- Save file
-keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+keymap.set({ "n" }, "<leader>w", "<cmd>w<cr><esc>", { desc = "Save File" })
 
 -- Better indenting
 keymap.set("v", "<", "<gv")

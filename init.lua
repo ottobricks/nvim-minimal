@@ -27,7 +27,7 @@ require("lazy").setup("plugins", {
         enabled = true,
         hererocks = true,
     },
-    checker = { enabled = true },
+    checker = { enabled = false },
     performance = {
         rtp = {
             disabled_plugins = {
@@ -44,3 +44,6 @@ require("lazy").setup("plugins", {
     },
 })
 vim.cmd("colorscheme nord")
+vim.opt.wrap = false
+vim.opt.textwidth = 0
+vim.opt.formatoptions = vim.opt.formatoptions - "t"

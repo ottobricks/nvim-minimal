@@ -11,8 +11,6 @@ return {
                 "lua-language-server",
                 "pyright",
                 "ruff",
-                "black",
-                "isort",
                 "debugpy",
             },
         },

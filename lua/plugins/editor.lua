@@ -295,7 +295,7 @@ return {
             },
         },
         lazy = false,
-        branch = "regexp",
+        -- branch = "regexp",
         config = function()
             require("venv-selector").setup({
                 settings = {

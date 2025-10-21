@@ -129,7 +129,7 @@ return {
                 ui_select = true,
                 win = { border = "rounded" },
             },
-            explorer = { enabled = true },
+            explorer = { enabled = false },
 
             -- Visual enhancements
             indent = { enabled = true },

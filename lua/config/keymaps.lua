@@ -37,7 +37,7 @@ keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase W
 keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste and keep the copy" })
 keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Better yank" })
 keymap.set("n", "<leader>Y", [["+Y]], { desc = "Better yank" })
-keymap.set("n", "<C-a>", "ggVG", { desc = "V to All" })
+-- keymap.set("n", "<C-a>", "ggVG", { desc = "V to All" })
 -- keymap.set("n", "<leader><C-y>", "ggVG<leader>y", { desc = "Yank all" })
 
 -- Move Lines
@@ -101,4 +101,16 @@ keymap.set("n", "<leader>cS", function()
     Snacks.picker.lsp_symbols({ workspace = true })
 end, { desc = "Workspace Symbols" })
 
--- Terminal keymaps are now handled by Snacks
+keymap.set(
+    { "n", "v" },
+    "<C-a>",
+    "<cmd>CodeCompanionActions<cr>",
+    { noremap = true, silent = true }
+)
+keymap.set(
+    { "n", "v" },
+    "<LocalLeader>a",
+    "<cmd>CodeCompanionChat Toggle<cr>",
+    { noremap = true, silent = true }
+)
+keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })

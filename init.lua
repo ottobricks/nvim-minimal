@@ -44,6 +44,7 @@ require("lazy").setup("plugins", {
     },
 })
 vim.cmd("colorscheme nord")
+vim.cmd("cab cc CodeCompanion")
 vim.opt.wrap = false
 vim.opt.textwidth = 0
 vim.opt.formatoptions = vim.opt.formatoptions - "t"

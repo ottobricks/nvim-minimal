@@ -1,6 +1,7 @@
 return {
     "olimorris/codecompanion.nvim",
     event = "VeryLazy",
+    enabled = true,
     -- lazy = true,
     -- dev = true,
     dependencies = {

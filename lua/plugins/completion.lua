@@ -12,10 +12,15 @@ return {
             },
         },
     },
-    { -- optional blink completion source for require statements and module annotations
+    {
+        -- optional blink completion source for require statements and module annotations
         "saghen/blink.cmp",
-        build = "cargo build --release",
+        -- build = "cargo build --release",
         version = "1.*",
+        dependencies = { "rafamadriz/friendly-snippets" },
+        fuzzy = { implementation = "prefer_rust_with_warning" },
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
         opts = {
             sources = {
                 -- add lazydev to your completion providers
@@ -33,6 +38,6 @@ return {
                 },
             },
         },
+        opts_extend = { "sources.default" },
     },
-    -- { "folke/neodev.nvim", enabled = false }, -- make sure to uninstall or disable neodev.nvim
 }

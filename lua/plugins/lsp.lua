@@ -44,6 +44,7 @@ return {
         dependencies = {
             "mason.nvim",
             "mason-org/mason-lspconfig.nvim",
+            "saghen/blink.cmp",
             {
                 "folke/lazydev.nvim",
                 ft = "lua",
@@ -130,6 +131,7 @@ return {
         },
         config = function(_, opts)
             local lspconfig = require("lspconfig")
+            -- local lspconfig = vim.lsp.config
 
             for server, config in pairs(opts.servers) do
                 config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)

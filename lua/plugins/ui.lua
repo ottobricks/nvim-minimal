@@ -128,6 +128,7 @@ return {
                 enabled = true,
                 ui_select = true,
                 win = { border = "rounded" },
+                layout = { layout = { position = "right" } },
             },
             explorer = { enabled = false },
 

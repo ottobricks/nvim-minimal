@@ -126,7 +126,63 @@ return {
                 mode = { "n", "v" },
             },
         },
-        opts = {},
+        opts = {
+            layouts = {
+                {
+                    elements = {
+                        {
+                            id = "scopes",
+                            size = 0.25,
+                        },
+                        {
+                            id = "breakpoints",
+                            size = 0.25,
+                        },
+                        {
+                            id = "stacks",
+                            size = 0.25,
+                        },
+                        {
+                            id = "watches",
+                            size = 0.25,
+                        },
+                    },
+                    position = "left",
+                    size = 40,
+                },
+                {
+                    elements = {
+                        {
+                            id = "repl",
+                            size = 0.7,
+                        },
+                        {
+                            id = "console",
+                            size = 0.3,
+                        },
+                    },
+                    position = "bottom",
+                    size = 0.45,
+                },
+            },
+            --     layouts = {
+            --         {
+            --             elements = { { id = "repl", size = 0.7 }, { id = "console", size = 0.3 } },
+            --             size = 0.45,
+            --             position = "bottom",
+            --         },
+            --         {
+            --             elements = {
+            --                 { id = "scopes", size = 0.5 },
+            --                 { id = "watches", size = 0.25 },
+            --                 { id = "stacks", size = 0.25 },
+            --                 { id = "breakpoints", size = 0.25 },
+            --             },
+            --             size = 40,
+            --             position = "left",
+            --         },
+            --     },
+        },
         config = function(_, opts)
             local dap = require("dap")
             local dapui = require("dapui")

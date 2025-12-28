@@ -25,9 +25,21 @@ return {
             -- keymap = {
             --     ["<A-y>"] = require("minuet").make_blink_map(),
             -- },
+            keymap = {
+                preset = "enter",
+                ["<S-Tab>"] = { "select_prev", "fallback" },
+                ["<Tab>"] = { "select_next", "fallback" },
+            },
             sources = {
-                -- add lazydev to your completion providers
-                default = { "lazydev", "lsp", "path", "snippets", "buffer", "minuet" },
+                default = {
+                    "lazydev",
+                    "lsp",
+                    "path",
+                    "snippets",
+                    "buffer",
+                    "minuet",
+                    "codecompanion",
+                },
                 providers = {
                     lazydev = {
                         name = "LazyDev",

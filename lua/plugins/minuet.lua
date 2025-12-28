@@ -21,6 +21,7 @@ return {
                         end_point = "http://localhost:11434/v1/completions",
                         model = "qwen2.5-coder:7b-base-q6_K",
                         optional = {
+                            -- https://github.com/ollama/ollama/blob/main/docs/api.md#generate-request-with-options
                             max_tokens = 110,
                             top_p = 0.9,
                         },
